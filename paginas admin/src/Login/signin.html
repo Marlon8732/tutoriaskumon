@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./Css/signin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="login-form-container">
+        <img src="./Image/backg.jpg">
+        <div class="title">
+            <h2>bienvenido</h2>
+            <p>al sistema de informacion</p>
+            <h1>centro de tituria kumon</h1>
+            <p>aprendamos juntos</p>
+        </div>
+        <div class="content">
+            <img src="./Image/avatar.svg" class="avatar" title="avatar" alt="avatar"/>
+
+            <form onsubmit="event.preventDefault(); iniciarSesion()">
+                <h3>login</h3>
+                <input type="email" name="" placeholder="enter your email" id="loginUsuario" class="box">
+                <input type="password" name="" placeholder="type  your password" id="loginPassword" class="box">
+    
+                <div class="remember">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">remember  me</label>
+                </div>
+    
+                <input type="submit" value="login now" class="btn">
+                <p>forget password? <a href="#">click here</a></p>
+                <p>don't have an account? <a href="#">create one</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="/Script/signin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

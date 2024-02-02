@@ -1,0 +1,372 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+body {
+    padding-top: 50%;
+    font-family: Arial, ro;
+    color: #f2f2f2;
+    font-size: 24pt;
+    margin: 0px;
+    padding: 0px;
+    
+    
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25pt;
+    font-family: 'Cooper Black', sans-serif;
+    padding-bottom: 30px;
+    color: #103b5c;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.logo p {
+    font-family: 'Cooper Black', sans-serif;
+    font-size: 20 pt;
+    text-align: center;
+
+}
+nav {
+    padding:20px;
+    background-image: linear-gradient(to right, #103b5c, #2d5070, #456684, #5e7d98, #7794ad, #7794ad, #7794ad, #7794ad, #5e7d98, #456684, #2d5070, #103b5c);
+    
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*background-color: rgb(35, 134, 134);*/
+   
+    height: 10%;
+    margin: 0;
+    padding: 0;
+
+
+}   
+
+
+nav li {
+    font-family: 'Cooper Black', sans-serif;
+    font-size: 90%;
+    margin-right: 4%;
+}
+
+nav a {
+    color: rgb(247, 249, 250);
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    line-height: 5.5vh;
+    text-shadow: 2px 1px 2px black;
+}
+
+nav a:hover {
+    background-color: #1ccccc;
+    /* Cambia el color de fondo cuando se pasa el ratón sobre los enlaces */
+}
+
+
+
+main {
+    text-shadow: 2px 2px 10px black;    
+    padding: 0px;
+    background-image: linear-gradient(to bottom, #103b5c, #a8f109);
+
+
+}
+
+section {
+    padding: 20px;
+    padding-top: 50px;
+    
+    margin-bottom: 5    0px;
+    text-align: justify;
+    
+}
+.Mision {
+    /*background-color:#ffdf5e;*/
+    height: 100%;
+}
+.columnas {
+    /*background-color:#ffdf5e;*/
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: space-around; /* Alinea los elementos de manera uniforme en el contenedor */
+}  
+.columnas p {
+    text-align: justify;
+}
+.columnas img{
+    margin-right: 10%;
+    width: 100%;
+    height: auto;
+}
+.miss {
+    width: 700px; /* Establece el ancho deseado para tus elementos */
+    height: auto; /* Establece la altura deseada para tus elementos */
+    
+    margin: 10px; /* Agrega espacio entre los elementos */
+    box-sizing: border-box; /* Incluye el borde y el relleno en las dimensiones del elemento */
+}
+
+
+#slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* styles.css */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.boton-iniciar-sesion {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+
+  .boton-iniciar-sesion:hover {
+    transform: scale(1.1);
+}
+  
+.boton-iniciar-sesion img {
+    width: 150px;
+  }
+
+#btnPrev1 {
+    width: 10%;
+}
+
+#btnNext1 {
+    width: 10%;
+}
+
+
+
+#Vision  {
+    /*background-color:#ffdf5e;*/
+    height: 100%;
+    
+}
+.teachers{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: space-around; /* Alinea los elementos de manera uniforme en el contenedor */
+
+}
+.teachers p {
+    text-align: justify;
+}
+.teacher {
+    width: 400px; /* Establece el ancho deseado para tus elementos */
+    height: auto; /* Establece la altura deseada para tus elementos */
+    
+    margin: 10px; /* Agrega espacio entre los elementos */
+    box-sizing: border-box; /* Incluye el borde y el relleno en las dimensiones del elemento */
+}
+
+
+.teachers img{
+    margin-right: 10%;
+    width: 100px;
+    height: auto;
+    margin-left: 35%;
+}
+
+#jasdk  {
+    /*background-color:#ffdf5e;*/
+    height: 100%;
+    display: flex;
+}
+
+.social{
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: space-around; /* Alinea los elementos de manera uniforme en el contenedor */
+
+}
+
+
+.social img {
+    
+    margin-right: 10%;
+    width: 100px;
+    height: 100px;
+    /* Otros estilos que desees aplicar a las imágenes sociales */
+}
+#Direccion{
+    padding-bottom: 50PX;
+    justify-content: flex-start;
+    
+    
+}
+
+.mapanddress {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    justify-content: space-evenly; /* Distribuirá los elementos de manera uniforme en el espacio disponible */
+   
+    /*background-color: rgb(35, 134, 134);*/
+   
+    height: 0%;
+    margin: 0;
+    padding: 0;
+}
+.map,
+.address {
+    justify-content: flex-start;
+    /*margin-left: 0px; /* Ajusta la cantidad de espacio entre los elementos */
+    padding-bottom: 0cm;
+    flex: 0 0 48%; /* Establece el ancho deseado para cada elemento (ajusta según sea necesario) */
+}
+
+
+
+.map img {
+    border: 10px solid yellow;  /* Establece el borde de 2 píxeles sólidos de color amarillo */
+    margin-right: 0%;
+    width: 150px;
+    height: 150px;
+    /* Otros estilos que desees aplicar a las imágenes sociales */
+}
+
+/* Estilo para la barra de navegación fija */
+nav.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #103b5c; /* Color de fondo de la barra de navegación fija */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para la barra de navegación */
+}
+
+
+/*inicio de sesion*/
+
+/* Estilo para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* Estilo específico para la imagen que tiene la clase "imagen-Login" */
+.imagen-login {
+    width: 100%; /* Ajusta el ancho según tus preferencias */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-left: 5%; /* Ajusta el espacio entre la imagen y los campos de entrada */
+}
+
+/* Estilo para el contenido de la ventana modal */
+.modal-content {
+    display:flex ;
+    justify-content: center;
+    border-radius: 10px; 
+
+
+    background-color: #2895b6;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height:auto;
+    width: max-content;
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Estilo para las etiquetas del formulario */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada del formulario */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/* Estilo para la ventana de inicio de sesión */
+#ventana-inicio-sesion {
+    border-radius: 10px; /* Ajusta el valor según tus preferencias */
+    border: 1px solid #ccc; /* Añade un borde para resaltar el contorno */
+    padding: 20px; /* Ajusta el espacio interno según tus preferencias */
+}
+
+/* Estilo para los campos de entrada */
+#usuario, #contrasena {
+    margin-bottom: 10px; /* Ajusta el espacio entre los campos de entrada */
+    width: 100%; /* O ajusta el ancho según tus preferencias */
+}
+
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="css/Estilo_admin.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Bienvenido</h1>        
+        <button id="logout" onclick="window.location.href='../Index.html'">Cerrar sesión</button>
+
+
+    </div>
+    <div class="sidebar">
+        <div id="Inicio" class="logo">
+			<img width="150px" src="../src/img/Logo Kumon.png" alt="Centro de Tutorias Kumon">
+			<div>
+				<h2>Centro de Tutorias Kumon</h2>
+				<p>¡Aprendamos Juntos!</p>
+				<p> </p>
+			</div>
+        </div>
+
+        <h3>Enlaces</h3>
+        <ul>
+            <li><a href="Actulizar datos02.html">Actualizar Datos</a></li>   
+            <li><a href="Inscribir.html">Inscribir Tutorias</a></li>         
+            <li><a href="Reportes.html">Reportes</a></li>
+            
+            <li><a href="Tutorias Inscritas.html">Tutorias Inscritas</a></li>
+           
+           
+            
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Inscribir Tutorías</h2>
+        <form action="#">
+            <label for="tutoria">Nombre de la Tutoría:</label><br>
+            <input type="text" id="tutoria" name="tutoria"><br>
+            <label for="inicio">Fecha de Inicio:</label><br>
+            <input type="date" id="inicio" name="inicio"><br>
+            <label for="horario">Horario:</label><br>
+            <input type="text" id="horario" name="horario"><br>
+            <label for="docente">Nombre del Docente:</label><br>
+            <input type="text" id="docente" name="docente"><br><br>
+            <input type="submit" value="Inscribir Tutoría">
+        </form>
+    </div>
+    
+    
+    
+</body>
+</html>

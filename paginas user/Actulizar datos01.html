@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="css/Estilo_admin.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Bienvenido</h1>
+        <button id="logout" onclick="window.location.href='../index.html'">Cerrar sesión</button>
+
+
+    </div>
+    <div class="sidebar">
+        <div id="Inicio" class="logo">
+            <img width="150px" src="../src/img/Logo Kumon.png" alt="Centro de Tutorias Kumon">
+            <div>
+                <h2>Centro de Tutorias Kumon</h2>
+                <p>¡Aprendamos Juntos!</p>
+                <p> </p>
+            </div>
+        </div>
+        <h3>Enlaces</h3>
+        <ul>
+            <li><a href="Actulizar datos01.html">Actualizar Datos</a></li>
+            <li><a href="Inscribir.html">Inscribir Tutorias</a></li>
+            <li><a href="Reportes.html">Reportes</a></li>
+
+            <li><a href="Tutorias Inscritas.html">Tutorias Inscritas</a></li>
+
+
+
+        </ul>
+    </div>
+    <div class="content">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Tabla de Información</h2>
+            <button>Agregar usuario</button>
+        </div>
+        <table>
+            <tr>
+                <th>Primer Nombre</th>
+                <th>Segundo Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Número de Teléfono</th>
+                <th>Correo Electrónico</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>Pedro</td>
+                <td>García</td>
+                <td>López</td>
+                <td>1234567890</td>
+                <td>juan.pedro@example.com</td>
+                <td>
+                    <button>Editar</button>
+                    <button>Borrar</button>
+                </td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </table>
+    </div>
+
+
+
+</body>
+
+</html>
