@@ -6,10 +6,83 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>One Page</title>
 	<link rel="stylesheet" href="css/estilos.css">
+	<script src="https://apis.google.com/js/api.js"></script>
+
+	<script>
+		// Función que se llama después de cargar la API de Google
+		function handleClientLoad() {
+			gapi.load('client', initClient);
+		}
+
+		// Inicializa la API de Google Sheets
+		function initClient() {
+			gapi.client.init({
+				apiKey: 'AIzaSyAolrO_vvIb9mMFcwpP-tOKvalilWmcJk8',
+				discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+			}).then(function () {
+				// La API está lista, ahora puedes llamar a la función de autenticación de Google Sheets
+				checkCredentials();
+			});
+		}
+
+		// Función para verificar las credenciales en la hoja de cálculo de Google Sheets
+		function checkCredentials() {
+			var spreadsheetId = '1IyxCbyqq2m41i167uPhoJKusbTDvFhW1I0ePo-YYd3Q';
+			var range = 'clientes!G2:I50'; // Por ejemplo, 'Hoja1!A1:B10'
+
+			gapi.client.sheets.spreadsheets.values.get({
+				spreadsheetId: spreadsheetId,
+				range: range,
+			}).then(function (response) {
+				var values = response.result.values;
+
+				// Obtén las credenciales ingresadas por el usuario
+				var username = document.getElementById('username').value;
+				var password = document.getElementById('password').value;
+				var storedPrivilegio;
+
+
+				// Itera sobre los registros en la hoja de cálculo
+				for (var i = 0; i < values.length; i++) {
+					var storedUsername = values[i][0].trim(); // asumiendo que la primera columna es el usuario
+					var storedPassword = values[i][1].trim(); // asumiendo que la segunda columna es la contraseña
+					storedPrivilegio = values[i][2].trim();// Asigna el valor de storedPrivilegio aquí
+
+					// Compara las credenciales con los registros en la hoja de cálculo
+					if (username.trim() === storedUsername && password.trim() === storedPassword) {
+						// Credenciales válidas, llama a la función de login
+						login(storedPrivilegio); // Pasa storedPrivilegio como argumento
+						return; // Sale del bucle si encuentra una coincidencia
+					}
+				}
+
+				// Si llega aquí, no se encontraron credenciales válidas
+				alert('Credenciales incorrectas');
+			});
+		}
+
+		// Tu función de login existente
+		function login(privilegio) {
+			
+
+
+			if (privilegio === 'admin') {
+				alert('Credenciales correctas estimado administrador');
+				window.location.href = 'paginas admin/Ingreso al sistema de gestion del centro.html';
+				
+
+			} else {alert('Credenciales correctas estimado usuario');
+				window.location.href = 'paginas user/Ingreso al sistema de gestion del centro.html';
+				
+
+			}
+
+		}
+	</script>
 
 </head>
 
-<body>
+<body onload="handleClientLoad()">
 	<header>
 		<div id="Inicio" class="logo">
 			<img src="src/img/Logo Kumon.png" alt="Centro de Tutorias Kumon">
@@ -20,9 +93,9 @@
 			</div>
 
 		</div>
-		
+
 		<nav id="navbar">
-       
+
 			<ul>
 				<li><a href="#">Iniciar Sesión</a></li>
 				<li><a href="#Inicio">Inicio</a></li>
@@ -139,7 +212,8 @@
 			<h2>Dirección</h2>
 
 			<div class="map">
-				<a href="https://maps.app.goo.gl/RfULY7qYfz7pfaTZ6" ><img src="src/img/Mapa.jpeg" alt="Mapa de la ubicación del Centro de Tutorías Kumon"></a>
+				<a href="https://maps.app.goo.gl/RfULY7qYfz7pfaTZ6"><img src="src/img/Mapa.jpeg"
+						alt="Mapa de la ubicación del Centro de Tutorías Kumon"></a>
 			</div>
 
 
@@ -156,9 +230,12 @@
 	</main>
 	<footer id="Contacto">
 		<div class="social">
-			<a href="https://www.facebook.com/centro.de.tutorias.kumon/" target="_blank"><img src="src/img/fb_icon_325x325.png" alt="Facebook"></a>
-			<a href="https://twitter.com/Centro_Kumon" target="_blank"><img src="src/img/X logo.jpeg" alt="X antes conocido como Twitter"></a>
-			<a href="https://www.instagram.com/centrodetutoriaskumon/" target="_blank"><img src="src/img/Instagram_icon.png" alt="Instagram"></a>
+			<a href="https://www.facebook.com/centro.de.tutorias.kumon/" target="_blank" rel="noopener"><img
+					src="src/img/fb_icon_325x325.png" alt="Facebook"></a>
+			<a href="https://twitter.com/Centro_Kumon" target="_blank" rel="noopener"><img src="src/img/X logo.jpeg"
+					alt="X antes conocido como Twitter"></a>
+			<a href="https://www.instagram.com/centrodetutoriaskumon/" target="_blank" rel="noopener"><img
+					src="src/img/Instagram_icon.png" alt="Instagram"></a>
 			<a href="mailto:kumontutoria@gmail.com"><img src="src/img/Gmail_icon_(2020).png" alt="Gmail"></a>
 		</div>
 		<p>&copy; Kumon 2023</p>
@@ -179,37 +256,15 @@
 
 					<!-- Imagen al lado derecho -->
 
-					<button type="button" onclick="login()" class="boton-iniciar-sesion">
+					<button type="button" onclick="checkCredentials()" class="boton-iniciar-sesion">
 						<img src="src/img/iniciar sesion.png" alt="Iniciar Sesión">
-					  </button>
-					
-					  
+					</button>
+
+
 
 
 				</form>
-				<script>
-					function login() {
-						var username = document.getElementById('username').value;
-						var password = document.getElementById('password').value;
 
-						// Verifica las credenciales como "admin" o "user"
-						if ((username === 'admin' && password === 'adminpass') || (username === 'user' && password === 'userpass')) {
-							alert('Inicio de sesión exitoso');
-
-							// Realiza acciones específicas para el inicio de sesión si es necesario
-							if (username === 'admin') {
-								window.location.href = 'paginas admin/Ingreso al sistema de gestion del centro.html';
-							}
-							if (username === 'user') {
-								window.location.href = 'paginas user/Ingreso al sistema de gestion del centro.html';
-							}
-
-
-						} else {
-							alert('Credenciales incorrectas');
-						}
-					}
-				</script>
 			</div>
 			<div>
 				<img src="src/img/Logo Kumon.png" alt="Icono de inicio de sesión" class="imagen-login">

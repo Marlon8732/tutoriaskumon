@@ -14,7 +14,7 @@ function init() {
 function loadSheetData() {
     gapi.client.sheets.spreadsheets.values.get({
         spreadsheetId: '1IyxCbyqq2m41i167uPhoJKusbTDvFhW1I0ePo-YYd3Q',
-        range: 'clientes!A2:G50', // Por ejemplo, 'Sheet1!A2:G'
+        range: 'clientes!A4:G50', // Por ejemplo, 'Sheet1!A2:G'
     }).then(function(response) {
         var values = response.result.values;
 
